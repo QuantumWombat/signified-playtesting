@@ -1,5 +1,6 @@
 """Module with entity information."""
 
+from enum import Enum
 from typing import List
 
 from src.card import Card, Rarity
@@ -28,17 +29,18 @@ class Enemy(Entity):
 
 
 # The following enumerate the list of companions in Signified.
-ARCHITECT_COMPANION = "Architect"
-ENTROPY_COMPANION = "Entropy"
+class CompanionType(Enum):
+    ARCHITECT_COMPANION = "Architect"
+    ENTROPY_COMPANION = "Entropy"
 
 # Each card in the game is associated with a single companion.
 # Strikes and defends are the only cards shared across, but they
 # do not appear here since they should not show up in shops.
 COMPANION_TO_CARDS = {
-    ARCHITECT_COMPANION: [
+    CompanionType.ARCHITECT_COMPANION: [
         Card("Summon Rat", Rarity.COMMON)
     ],
-    ENTROPY_COMPANION: [
+    CompanionType.ENTROPY_COMPANION: [
         Card("Bellows", Rarity.COMMON)
     ],
 }
