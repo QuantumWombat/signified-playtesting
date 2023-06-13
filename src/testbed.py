@@ -1,9 +1,12 @@
 """Testbed is the main testbed for dogfooding GoFaceGames"""
 
 from dataclasses import dataclass
+import random
 from typing import Dict, List
+from src.card import Card
 
 from src.entity import COMPANION_TO_CARDS, Companion, CompanionType, Enemy
+from src.magic_numbers import NUM_CARDS_TO_SHOW
 
 class Testbed():
     """Testbed is the root data structure for a prototyping session.
@@ -14,6 +17,10 @@ class Testbed():
     def __init__(self):
         self.companions: List[Companion] = []
         self.shop = Shop()
+
+    def __str__(self):
+        """Pretty print global information about the state of the game."""
+        return ""
 
 class Encounter():
 
@@ -35,6 +42,11 @@ class Shop():
     """
     level: int = 1
 
-    def generate_card_options(current_companions: List[CompanionType]) -> List[str]:
+    def generate_card_options(self, current_companions: List[CompanionType]) -> List[Card]:
         card_mapping = COMPANION_TO_CARDS
-        all_cards = []
+        unique_companions = set(current_companions)
+        card_opts = [card for companion in unique_companions for card in card_mapping[companion]]
+        # Make a "big list" of all the options (occurences is proportional to rarity).
+        # Note: the following makes choices without replacement.
+        # We should create a stateful "Pool".
+        return random.choices(card_opts, k=min(len(card_opts), NUM_CARDS_TO_SHOW))
