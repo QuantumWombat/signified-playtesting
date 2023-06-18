@@ -6,13 +6,22 @@ class Rarity(Enum):
     UNCOMMON = 2
     RARE = 3
 
-@dataclass(frozen=True, repr=False)
-class Card():
-    name: str
-    rarity: Rarity
+class Card(Enum):
+    """Card is an enum representing all the static card types in Signified.
+    
+    The mapping from companion to card is represented on the companion level.
+    """
+    STRIKE = ("Strike", Rarity.COMMON)
+    DEFEND = ("Defend", Rarity.COMMON)
 
-    def __str__(self) -> str:
-        return f"🃏 {self.name}"
+    # ARCHITECT cards
+    SUMMON_RAT = ("Summon Rat", Rarity.COMMON)
 
-    def __repr__(self):
-        return self.__str__()
+    # ENTROPY cards
+    BELLOWS = ("Bellows", Rarity.COMMON)
+
+    def __new__(cls, value, rarity):
+        obj = object.__new__(cls)
+        obj._value_ = value
+        obj.rarity = rarity
+        return obj

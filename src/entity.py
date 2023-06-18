@@ -3,7 +3,7 @@
 from enum import Enum
 from typing import List
 
-from src.card import Card, Rarity
+from src.card import Card
 
 class Entity:
     def __init__(self, name: str, starting_health: int = 20, starting_attack: int = 1):
@@ -30,38 +30,40 @@ class Enemy(Entity):
 
 # The following enumerate the list of companions in Signified.
 class CompanionType(Enum):
-    ARCHITECT_COMPANION = "Architect"
-    ENTROPY_COMPANION = "Entropy"
+    ARCHITECT = (
+        "Architect",
+        [Card.SUMMON_RAT],
+        [Card.STRIKE] * 2 + [Card.DEFEND] * 2 + [Card.SUMMON_RAT],
+    )
+    ENTROPY = (
+        "Entropy",
+        [Card.BELLOWS],
+        [Card.STRIKE] * 2 + [Card.DEFEND] * 2 + [Card.BELLOWS],
+    )
 
-# Each card in the game is associated with a single companion.
-# Strikes and defends are the only cards shared across, but they
-# do not appear here since they should not show up in shops.
-COMPANION_TO_CARDS = {
-    CompanionType.ARCHITECT_COMPANION: [
-        Card("Summon Rat", Rarity.COMMON)
-    ],
-    CompanionType.ENTROPY_COMPANION: [
-        Card("Bellows", Rarity.COMMON)
-    ],
-}
-    
+    def __new__(cls, value, cards, starting_deck):
+        obj = object.__new__(cls)
+        obj._value_ = value
+        obj.cards = cards
+        obj.starting_deck = starting_deck
+        return obj
+
 
 class Companion(Entity):
     """Companion represents members of your team in Signified.
-    
+
     Companions have a deck of cards associated with them.
     For the paper prototype, we can use physical cards.
     """
 
     def __init__(
-        self, 
-        name: str, 
-        starting_health: int = 20, 
+        self,
+        companion_type: CompanionType,
+        starting_health: int = 20,
         starting_attack: int = 1,
-        starting_cards: List[str] = [],
     ):
-        super().__init__(name, starting_health, starting_attack)
-        self.starting_cards = starting_cards
+        super().__init__(companion_type.value, starting_health, starting_attack)
+        self.starting_cards = companion_type.starting_deck
 
     def __str__(self):
         return f"{self.name}: {self.attack}⚔️ {self.health}/{self.max_health}💖"
