@@ -1,12 +1,25 @@
-# Dogfooding Plugin
+# Signified Playtesting
 
-# Problem to be Solved
+This repository is an intermediate form between a paper prototype and Unity software.
+The idea is to allow technical game developers to quickly prototype and iterate upon design.
+We are working on Signified: a deckbuilder roguelike autobattler card game.
 
-Interactive session; Jupyter notebook?
-## Shop
-1. Keep track of cards / minions to be offered in the shop
-2. Keep track of how much money the player has -> mechanism for editing the money the player has.
-## Combat.
-1. Keep track of enemy health
-2. Keep track of minion health -> mechanism for dealing damage to an entity.
+The envisioned experience of using this repo is creating paper cards and enemies.
+While running combat, you can keep track of damage / stats using commands in the Jupyter notebook.
+The notebook also simulates the shop and keeps track of your current roster.
 
+## Getting started
+
+1. Set up a virtual environment.
+```{bash}
+python -m venv .venv
+source .venv/bin/activate
+```
+2. Install the requirements.
+```{bash}
+pip install -r requirements.txt
+```
+3. Run the Jupyter server and open the playground Notebook.
+```{bash}
+jupyter lab
+```
