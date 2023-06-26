@@ -7,13 +7,15 @@ class EnemyType(Enum):
     """Static enumeration of all the companion types in Signified."""
     THIEF = (
         "Thief",
-        "Basic enemy that attacks the same amount each turn."
+        "Basic enemy that attacks the same amount each turn.",
         [10] * 10,
+        30,
     )
     CRINGELORD = (
         "Cringelord",
         "The cringelord scales, dealing increasing damage each turn.",
         [3 * i + 10 for i in range(10)],
+        40,
     )
 
     def __new__(
@@ -34,13 +36,16 @@ class EnemyType(Enum):
 class Enemy(Entity):
     """Enemy represents a single enemy in Signified."""
 
-    def __init__(self, enemy_type: EnemyType):
-        super().__init__(enemy_type.value, enemy_type.starting_health, 0)
-        self.attack_pattern = enemy_type.attack_pattern
+    def __init__(self, name: str, enemy_type: EnemyType):
+        super().__init__(name, enemy_type.starting_health, 0)
+        self.enemy_type = enemy_type
         self.attack_counter = 0
 
     def __str__(self):
-        return f"😈 {self.name}: {self.health}/{self.max_health}💖. Attacking for {self.attack_pattern[self.attack_counter]}"
+        return (
+            f"😈 {self.name}, {self.enemy_type.value}: {self.health}/{self.max_health}💖. "
+            f"Attacking for {self.enemy_type.attack_pattern[self.attack_counter]}"
+        )
 
     def next_attack(self) -> None:
         self.attack_counter += 1

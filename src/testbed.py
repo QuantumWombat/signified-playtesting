@@ -25,7 +25,7 @@ class Testbed():
             name = self._generate_unique_companion_name(c)
             self.companions[name] = Companion(name, c)
         self.shop = Shop()
-        self.encounter_count = 0
+        self.encounter_count = 1
 
     def _generate_unique_companion_name(self, c: CompanionType) -> str:
         i = 0
@@ -76,11 +76,16 @@ class Testbed():
 
 class Encounter():
 
-    def __init__(self):
-        self.enemies: Dict[str, Enemy] = {}
+    def __init__(self, enemies: List[Enemy]):
+        self.enemies = {e.name: e for e in enemies}
+        self.turn_counter = 1
 
-    def add_enemy(self, enemy: Enemy):
-        self.enemies[enemy.name] = enemy
+    def end_turn(self):
+        print(f"End of turn {self.turn_counter}")
+        for _, e in self.enemies.items():
+            e.next_attack()
+        self.turn_counter += 1
+        print(self)
 
     def __str__(self):
         return "\n".join([str(e) for _, e in self.enemies.items()])
