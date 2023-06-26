@@ -6,7 +6,8 @@ import random
 from typing import Dict, List
 from src.card import Card
 
-from src.entity import Companion, CompanionType, Enemy
+from src.enemy import Enemy
+from src.companion import Companion, CompanionType
 from src.constants import CARD_COST, COMBAT_REWARD_GOLD, COMPANION_COST, NUM_STARTING_COMPANIONS, REROLL_COST
 
 
