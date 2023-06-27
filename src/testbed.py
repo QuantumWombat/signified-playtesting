@@ -3,7 +3,7 @@
 from dataclasses import dataclass, field
 from enum import Enum
 import random
-from typing import Dict, List
+from typing import Dict, List, Optional
 from src.card import Card
 
 from src.enemy import Enemy
@@ -24,7 +24,10 @@ class Testbed:
     the enemies to follow.
     """
 
-    def __init__(self):
+    def __init__(self, seed: Optional[int] = None):
+        if seed is not None:
+            print(f"Using seed {seed}")
+            random.seed(seed)
         # Generate a list of starter companions.
         starting_companion_types = random.choices(
             list(CompanionType), k=NUM_STARTING_COMPANIONS
