@@ -3,8 +3,10 @@ import random
 from src.card import Card
 from src.entity import Entity
 
+
 class CompanionType(Enum):
     """Static enumeration of all the companion types in Signified."""
+
     ARCHITECT = (
         "Architect",
         [Card.SUMMON_RAT],
@@ -27,7 +29,13 @@ class CompanionType(Enum):
     )
     WARRIOR = (
         "Warrior",
-        [Card.DOUBLE_STRIKE, Card.BLOOD_SACRIFICE, Card.VENGEFUL_SWEEP, Card.TAKE_MY_ENERGY, Card.FINAL_FORM],
+        [
+            Card.DOUBLE_STRIKE,
+            Card.BLOOD_SACRIFICE,
+            Card.VENGEFUL_SWEEP,
+            Card.TAKE_MY_ENERGY,
+            Card.FINAL_FORM,
+        ],
         [Card.STRIKE] * 2 + [Card.DEFEND] * 2 + [Card.DOUBLE_STRIKE],
     )
 
