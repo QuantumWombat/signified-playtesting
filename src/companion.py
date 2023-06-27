@@ -10,10 +10,25 @@ class CompanionType(Enum):
         [Card.SUMMON_RAT],
         [Card.STRIKE] * 2 + [Card.DEFEND] * 2 + [Card.SUMMON_RAT],
     )
+    CLOWN = (
+        "Clown",
+        [],
+        [],
+    )
     ENTROPY = (
         "Entropy",
-        [Card.BELLOWS],
+        [Card.BELLOWS, Card.SELF_SHARPENING_BLADE],
         [Card.STRIKE] * 2 + [Card.DEFEND] * 2 + [Card.BELLOWS],
+    )
+    PYTHIA = (
+        "Pythia",
+        [],
+        [],
+    )
+    WARRIOR = (
+        "Warrior",
+        [Card.DOUBLE_STRIKE, Card.BLOOD_SACRIFICE, Card.VENGEFUL_SWEEP, Card.TAKE_MY_ENERGY, Card.FINAL_FORM],
+        [Card.STRIKE] * 2 + [Card.DEFEND] * 2 + [Card.DOUBLE_STRIKE],
     )
 
     def __new__(cls, value, cards, starting_deck):
@@ -24,7 +39,7 @@ class CompanionType(Enum):
         return obj
 
     def generate_name(self) -> str:
-        prefix = random.choice(["WideLloyd", "Jimothy", "Foo", "Wizard", "Marmot"])
+        prefix = random.choice(["Alpha", "Beta", "Gamma", "Delta", "Omega"])
         return prefix + self.value
 
 
