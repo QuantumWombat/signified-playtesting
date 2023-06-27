@@ -15,7 +15,7 @@ class EnemyType(Enum):
     CRINGELORD = (
         "Cringelord",
         "The cringelord scales, dealing increasing damage each turn.",
-        [3 * i + 10 for i in range(10)],
+        [1 * i + 10 for i in range(10)],
         40,
     )
 

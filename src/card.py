@@ -28,6 +28,16 @@ class Card(Enum):
 
     # ENTROPY cards
     BELLOWS = ("Bellows", "draw 3 and exhaust one of the cards", Rarity.COMMON)
+    SOOTY_ARMOR = (
+        "Sooty Armor",
+        "give a companion 10 block, shuffle a status card into their deck",
+        Rarity.COMMON,
+    )
+    FIERY_ENCOURAGEMENT = (
+        "Fiery Encouragement",
+        "give a companion X strength, shuffle in status card",
+        Rarity.UNCOMMON,
+    )
     SELF_SHARPENING_BLADE = (
         "Self Sharpening Blade",
         "deal 5 damage. deal 5 more damage next time",

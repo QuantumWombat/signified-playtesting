@@ -7,26 +7,31 @@ from src.entity import Entity
 class CompanionType(Enum):
     """Static enumeration of all the companion types in Signified."""
 
-    ARCHITECT = (
-        "Architect",
-        [Card.SUMMON_RAT],
-        [Card.STRIKE] * 2 + [Card.DEFEND] * 2 + [Card.SUMMON_RAT],
-    )
-    CLOWN = (
-        "Clown",
-        [],
-        [],
-    )
+    # ARCHITECT = (
+    #     "Architect",
+    #     [Card.SUMMON_RAT],
+    #     [Card.STRIKE] * 2 + [Card.DEFEND] * 2 + [Card.SUMMON_RAT],
+    # )
+    # CLOWN = (
+    #     "Clown",
+    #     [],
+    #     [],
+    # )
     ENTROPY = (
         "Entropy",
-        [Card.BELLOWS, Card.SELF_SHARPENING_BLADE],
+        [
+            Card.BELLOWS,
+            Card.SELF_SHARPENING_BLADE,
+            Card.SOOTY_ARMOR,
+            Card.FIERY_ENCOURAGEMENT,
+        ],
         [Card.STRIKE] * 2 + [Card.DEFEND] * 2 + [Card.BELLOWS],
     )
-    PYTHIA = (
-        "Pythia",
-        [],
-        [],
-    )
+    # PYTHIA = (
+    #     "Pythia",
+    #     [],
+    #     [],
+    # )
     WARRIOR = (
         "Warrior",
         [
