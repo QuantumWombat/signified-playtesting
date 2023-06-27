@@ -1,5 +1,6 @@
 """Module with entity information."""
 
+
 class Entity:
     """Entity is the base class for all entity instances, friend or foe."""
 

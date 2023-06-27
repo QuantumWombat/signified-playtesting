@@ -5,6 +5,7 @@ from src.entity import Entity
 
 class EnemyType(Enum):
     """Static enumeration of all the companion types in Signified."""
+
     THIEF = (
         "Thief",
         "Basic enemy that attacks the same amount each turn.",
@@ -52,4 +53,3 @@ class Enemy(Entity):
 
     def prev_attack(self) -> None:
         self.attack_counter -= 1
-
