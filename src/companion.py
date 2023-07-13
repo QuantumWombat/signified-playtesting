@@ -10,8 +10,8 @@ class CompanionType(Enum):
     ARCHITECT = (
         "Architect",
         "Start combat with 1 construct (deck full of shivs)",
-        [Card.SUMMON_RAT],
-        [Card.STRIKE] * 2 + [Card.DEFEND] * 2 + [Card.SUMMON_RAT],
+        [Card.SUMMON_ARTIFACT, Card.IDEATE, Card.FINISHING_TOUCH, Card.MITOSIS],
+        [Card.STRIKE] * 2 + [Card.DEFEND] * 2 + [Card.SUMMON_ARTIFACT],
     )
     CLOWN = (
         "Clown",
@@ -33,8 +33,8 @@ class CompanionType(Enum):
     PYTHIA = (
         "Pythia",
         "Retain 1 card",
-        [],
-        [],
+        [Card.MENTAL_PRISM, Card.ADRENALINE, Card.FORCE_FIELD, Card.DISCHARGE],
+        [Card.STRIKE] * 2 + [Card.DEFEND] * 2 + [Card.MENTAL_PRISM],
     )
     WARRIOR = (
         "Warrior",

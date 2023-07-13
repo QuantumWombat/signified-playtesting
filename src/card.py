@@ -18,10 +18,25 @@ class Card(Enum):
     DEFEND = ("Defend", "block", Rarity.COMMON)
 
     # ARCHITECT cards
-    SUMMON_RAT = (
-        "Summon Rat",
+    SUMMON_ARTIFACT = (
+        "Summon Artifact",
         "summon a token that draws you a shiv each turn",
         Rarity.COMMON,
+    )
+    FINISHING_TOUCH = (
+        "Finishing touch",
+        "for each attack you played this turn, deal 3 damage",
+        Rarity.COMMON,
+    )
+    IDEATE = (
+        "Ideate",
+        "draw a card for each artifact you control",
+        Rarity.UNCOMMON,
+    )
+    MITOSIS = (
+        "Mitosis",
+        "destroy a token you control and summon 2 new ones",
+        Rarity.UNCOMMON,
     )
 
     # CLOWN cards
@@ -45,6 +60,26 @@ class Card(Enum):
     )
 
     # PYTHIA cards
+    DISCHARGE = (
+        "Discharge",
+        "for each card in your hand, deal 1 damage",
+        Rarity.COMMON,
+    )
+    MENTAL_PRISM = (
+        "Mental Prism",
+        "draw 2 cards, gain 5 block",
+        Rarity.COMMON,
+    )
+    FORCE_FIELD = (
+        "Force field",
+        "give a companion immune this turn",
+        Rarity.UNCOMMON,
+    )
+    ADRENALINE = (
+        "Adrenaline",
+        "0 mana gain 1 energy draw 2 cards",
+        Rarity.RARE,
+    )
 
     # WARRIOR cards
     BLOOD_SACRIFICE = (
