@@ -15,3 +15,7 @@ class Entity:
         print(self)
         if self.health <= 0:
             print(f"Entity {self.name} died")
+
+    def increase_strength(self, amount: int):
+        self.attack += amount
+        print(self)

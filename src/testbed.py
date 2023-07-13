@@ -24,13 +24,18 @@ class Testbed:
     the enemies to follow.
     """
 
-    def __init__(self, seed: Optional[int] = None):
+    def __init__(
+        self,
+        seed: Optional[int] = None,
+        enabled_companions: List[CompanionType] = list(CompanionType),
+    ):
         if seed is not None:
             print(f"Using seed {seed}")
             random.seed(seed)
         # Generate a list of starter companions.
+        self.enabled_companions = enabled_companions
         starting_companion_types = random.choices(
-            list(CompanionType), k=NUM_STARTING_COMPANIONS
+            enabled_companions, k=NUM_STARTING_COMPANIONS
         )
         self.companions: Dict[str, Companion] = {}
         for c in starting_companion_types:
@@ -64,7 +69,7 @@ class Testbed:
         self.shop.generate_card_options(
             [c.companion_type for _, c in self.companions.items()]
         )
-        self.shop.generate_companion_options()
+        self.shop.generate_companion_options(self.enabled_companions)
         print(self)
 
     def buy_companion(self, companion: CompanionType) -> None:
@@ -180,9 +185,11 @@ class Shop:
             k=min(len(card_opts), self.level.shop_constants.num_cards_to_show),
         )
 
-    def generate_companion_options(self) -> None:
+    def generate_companion_options(
+        self, enabled_companions: List[CompanionType] = list(CompanionType)
+    ) -> None:
         self.companion_options = random.choices(
-            list(CompanionType), k=self.level.shop_constants.num_companions_to_show
+            enabled_companions, k=self.level.shop_constants.num_companions_to_show
         )
 
     def _buy_card(self, card: Card) -> None:

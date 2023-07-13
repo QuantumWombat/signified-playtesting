@@ -7,18 +7,21 @@ from src.entity import Entity
 class CompanionType(Enum):
     """Static enumeration of all the companion types in Signified."""
 
-    # ARCHITECT = (
-    #     "Architect",
-    #     [Card.SUMMON_RAT],
-    #     [Card.STRIKE] * 2 + [Card.DEFEND] * 2 + [Card.SUMMON_RAT],
-    # )
-    # CLOWN = (
-    #     "Clown",
-    #     [],
-    #     [],
-    # )
+    ARCHITECT = (
+        "Architect",
+        "Start combat with 1 construct (deck full of shivs)",
+        [Card.SUMMON_RAT],
+        [Card.STRIKE] * 2 + [Card.DEFEND] * 2 + [Card.SUMMON_RAT],
+    )
+    CLOWN = (
+        "Clown",
+        "End of combat, gain 5 max HP",
+        [],
+        [],
+    )
     ENTROPY = (
         "Entropy",
+        "End of combat, remove one card PERMANENTLY",
         [
             Card.BELLOWS,
             Card.SELF_SHARPENING_BLADE,
@@ -27,13 +30,15 @@ class CompanionType(Enum):
         ],
         [Card.STRIKE] * 2 + [Card.DEFEND] * 2 + [Card.BELLOWS],
     )
-    # PYTHIA = (
-    #     "Pythia",
-    #     [],
-    #     [],
-    # )
+    PYTHIA = (
+        "Pythia",
+        "Retain 1 card",
+        [],
+        [],
+    )
     WARRIOR = (
         "Warrior",
+        "When this companion dies, gain 1 strength PERMANENTLY",
         [
             Card.DOUBLE_STRIKE,
             Card.BLOOD_SACRIFICE,
@@ -44,9 +49,10 @@ class CompanionType(Enum):
         [Card.STRIKE] * 2 + [Card.DEFEND] * 2 + [Card.DOUBLE_STRIKE],
     )
 
-    def __new__(cls, value, cards, starting_deck):
+    def __new__(cls, value, passive_desc, cards, starting_deck):
         obj = object.__new__(cls)
         obj._value_ = value
+        obj.passive_desc = passive_desc
         obj.cards = cards
         obj.starting_deck = starting_deck
         return obj
