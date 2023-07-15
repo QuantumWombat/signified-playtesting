@@ -2,7 +2,9 @@
 
 from dataclasses import dataclass, field
 from enum import Enum
+import os
 import random
+import pickle
 from typing import Dict, List, Optional
 from src.card import Card
 
@@ -97,6 +99,16 @@ class Testbed:
     def print_roster(self) -> None:
         print(self._roster_to_str())
 
+    def save_to_file(self, filepath: str = "out/testbed.pkl") -> None:
+        os.makedirs(os.path.dirname(filepath), exist_ok=True)
+        with open(filepath, "w+b") as f:
+            pickle.dump(self, f)
+
+    @staticmethod
+    def from_file(filepath: str = "out/testbed.pkl") -> "Testbed":
+        with open(filepath, "rb") as f:
+            return pickle.load(f)
+
 
 class Encounter:
     def __init__(self, enemies: List[Enemy]):
@@ -128,16 +140,19 @@ class ShopLevel(Enum):
 
     ONE = (
         1,
+        "Energy: 3, Max Team Size: 3",
         ShopConstants(num_cards_to_show=3, num_companions_to_show=2, upgrade_cost=4),
     )
     TWO = (
         2,
+        "Energy: 3, Max Team Size 4",
         ShopConstants(num_cards_to_show=4, num_companions_to_show=3, upgrade_cost=8),
     )
 
-    def __new__(cls, value, shop_constants):
+    def __new__(cls, value, desc, shop_constants):
         obj = object.__new__(cls)
         obj._value_ = value
+        obj.desc = desc
         obj.shop_constants = shop_constants
         return obj
 
@@ -214,6 +229,7 @@ class Shop:
 
     def __str__(self) -> str:
         disp = [
+            f"Shop level: {self.level.value}: {self.level.desc}",
             f"Your current gold: {self.gold}",
             f"COMPANIONS ({COMPANION_COST} gold): "
             + ", ".join([c.value for c in self.companion_options]),

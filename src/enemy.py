@@ -2,6 +2,8 @@ from enum import Enum
 from typing import List
 from src.entity import Entity
 
+NUM_ATTACKS = 20
+
 
 class EnemyType(Enum):
     """Static enumeration of all the companion types in Signified."""
@@ -9,14 +11,20 @@ class EnemyType(Enum):
     THIEF = (
         "Thief",
         "Basic enemy that attacks the same amount each turn.",
-        [10] * 10,
+        [10] * NUM_ATTACKS,
         30,
     )
     CRINGELORD = (
         "Cringelord",
         "The cringelord scales, dealing increasing damage each turn.",
-        [1 * i + 10 for i in range(10)],
+        [1 * i + 10 for i in range(NUM_ATTACKS)],
         40,
+    )
+    GOBLIN = (
+        "Goblin",
+        "Basic enemy that attacks the same amount each turn but weaker",
+        [5] * NUM_ATTACKS,
+        20,
     )
 
     def __new__(
