@@ -233,8 +233,10 @@ class Shop:
             f"Your current gold: {self.gold}",
             f"COMPANIONS ({COMPANION_COST} gold): "
             + ", ".join([c.value for c in self.companion_options]),
-            f"CARDS ({CARD_COST} gold): "
-            + ", ".join([card.value for card in self.card_options]),
+            f"CARDS ({CARD_COST} gold): \n"
+            + "\n".join(
+                [card.value + ": " + card.description for card in self.card_options]
+            ),
             f"UPGRADE ({self.level.shop_constants.upgrade_cost} gold)",
             f"REROLL ({REROLL_COST} gold)",
         ]
