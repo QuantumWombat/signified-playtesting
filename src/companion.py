@@ -1,6 +1,5 @@
 from enum import Enum
 import random
-from src.card import Card
 from src.entity import Entity
 
 
@@ -9,56 +8,35 @@ class CompanionType(Enum):
 
     ARCHITECT = (
         "Architect",
-        "Start combat with 1 construct (deck full of shivs)",
-        [Card.SUMMON_ARTIFACT, Card.IDEATE, Card.FINISHING_TOUCH, Card.MITOSIS],
-        [Card.STRIKE] * 2 + [Card.DEFEND] * 2 + [Card.SUMMON_ARTIFACT],
+        "This companion starts with an orb. For each companion on your team, if they have at least "
+        + "one orb, they get a shiv at the start of each turn.",
     )
     CLOWN = (
         "Clown",
-        "End of combat, gain 5 max HP",
-        [],
-        [],
+        "Upon being attacked, exhaust the top card of this companion's deck and gain more"
+        + "block if it's a status card and less block otherwise",
     )
     ENTROPY = (
         "Entropy",
         "End of combat, remove one card PERMANENTLY",
-        [
-            Card.BELLOWS,
-            Card.SELF_SHARPENING_BLADE,
-            Card.SOOTY_ARMOR,
-            Card.FIERY_ENCOURAGEMENT,
-        ],
-        [Card.STRIKE] * 2 + [Card.DEFEND] * 2 + [Card.BELLOWS],
     )
     PYTHIA = (
         "Pythia",
-        "Retain 1 card",
-        [Card.MENTAL_PRISM, Card.ADRENALINE, Card.FORCE_FIELD, Card.DISCHARGE],
-        [Card.STRIKE] * 2 + [Card.DEFEND] * 2 + [Card.MENTAL_PRISM],
+        "At the start of each turn, draw an extra card from this companion.",
     )
-    WARRIOR = (
-        "Warrior",
-        "When this companion dies, gain 1 strength PERMANENTLY",
-        [
-            Card.DOUBLE_STRIKE,
-            Card.BLOOD_SACRIFICE,
-            Card.VENGEFUL_SWEEP,
-            Card.TAKE_MY_ENERGY,
-            Card.FINAL_FORM,
-        ],
-        [Card.STRIKE] * 2 + [Card.DEFEND] * 2 + [Card.DOUBLE_STRIKE],
+    ABORAH = (
+        "Aborah",
+        "At the end of combat, permanently gain base strength. Starts with X base strength.",
     )
 
-    def __new__(cls, value, passive_desc, cards, starting_deck):
+    def __new__(cls, value, passive_desc):
         obj = object.__new__(cls)
         obj._value_ = value
         obj.passive_desc = passive_desc
-        obj.cards = cards
-        obj.starting_deck = starting_deck
         return obj
 
     def generate_name(self) -> str:
-        prefix = random.choice(["Alpha", "Beta", "Gamma", "Delta", "Omega"])
+        prefix = random.choice(["A-", "B-", "C-", "D-", "E-"])
         return prefix + self.value
 
 
@@ -73,7 +51,7 @@ class Companion(Entity):
         self,
         name: str,
         companion_type: CompanionType,
-        starting_health: int = 20,
+        starting_health: int = 10,
         starting_attack: int = 1,
     ):
         super().__init__(name, starting_health, starting_attack)

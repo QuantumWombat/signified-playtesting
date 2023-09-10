@@ -1,5 +1,6 @@
-from dataclasses import dataclass
 from enum import Enum
+from typing import List
+from src.companion import CompanionType
 
 
 class Rarity(Enum):
@@ -14,91 +15,115 @@ class Card(Enum):
     The mapping from companion to card is represented on the companion level.
     """
 
-    STRIKE = ("Strike", "deal damage", Rarity.COMMON)
-    DEFEND = ("Defend", "block", Rarity.COMMON)
-
     # ARCHITECT cards
-    SUMMON_ARTIFACT = (
-        "Summon Artifact",
-        "summon a token that draws you a shiv each turn",
+    PROTECT_FOR_EACH_ORB = (
+        "Protect for each orb",
+        CompanionType.ARCHITECT,
+        "target companion gets X block for each orb they have",
         Rarity.COMMON,
     )
-    FINISHING_TOUCH = (
-        "Finishing touch",
-        "for each attack you played this turn, deal 3 damage",
+    STRENGTH_FOR_ALL_WITH_ORB = (
+        "Strength for all with an orb",
+        CompanionType.ARCHITECT,
+        "each companion with at least one orb gets X strength",
         Rarity.COMMON,
     )
-    IDEATE = (
-        "Ideate",
-        "draw a card for each artifact you control",
-        Rarity.UNCOMMON,
-    )
-    MITOSIS = (
-        "Mitosis",
-        "destroy a token you control and summon 2 new ones",
-        Rarity.UNCOMMON,
+    SUMMON_ORB = (
+        "Summon orb",
+        CompanionType.ARCHITECT,
+        "summon an orb on a companion",
+        Rarity.COMMON,
     )
 
     # CLOWN cards
-
-    # ENTROPY cards
-    BELLOWS = ("Bellows", "draw 3 and exhaust one of the cards", Rarity.COMMON)
-    SOOTY_ARMOR = (
-        "Sooty Armor",
-        "give a companion 10 block, shuffle a status card into their deck",
+    FIRE_EATING = (
+        "Fire eating",
+        CompanionType.CLOWN,
+        "Shuffle N status cards into this deck that say: "
+        + "When exhausted, deal X damage to a random enemy",
         Rarity.COMMON,
     )
-    FIERY_ENCOURAGEMENT = (
-        "Fiery Encouragement",
-        "give a companion X strength, shuffle in status card",
-        Rarity.UNCOMMON,
+    POWER_THROUGH = (
+        "Power through",
+        CompanionType.CLOWN,
+        "Give a companion X block and shuffle 2 wound status cards into their deck",
+        Rarity.COMMON,
+    )
+    REPRIEVE = (
+        "Reprieve",
+        CompanionType.CLOWN,
+        "Gain X block. When exhausted, this companion heals Y HP",
+        Rarity.COMMON,
+    )
+
+    # ENTROPY cards
+    BELLOWS = (
+        "Bellows",
+        CompanionType.ENTROPY,
+        "draw X and exhaust Y of the cards",
+        Rarity.COMMON,
+    )
+    SOOTY_ARMOR = (
+        "Sooty Armor",
+        CompanionType.ENTROPY,
+        "give a companion X block and exhaust the top card of their deck",
+        Rarity.COMMON,
     )
     SELF_SHARPENING_BLADE = (
         "Self Sharpening Blade",
-        "deal 5 damage. deal 5 more damage next time",
-        Rarity.UNCOMMON,
+        CompanionType.ENTROPY,
+        "deal X damage. deal Y more damage next time",
+        Rarity.COMMON,
     )
 
     # PYTHIA cards
     DISCHARGE = (
         "Discharge",
-        "for each card in your hand, deal 1 damage",
+        CompanionType.PYTHIA,
+        "for each X cards in your hand, deal Y damage",
         Rarity.COMMON,
     )
-    MENTAL_PRISM = (
-        "Mental Prism",
-        "draw 2 cards, gain 5 block",
+    BACKFLIP = (
+        "Backflip",
+        CompanionType.PYTHIA,
+        "draw 2 cards, gain X block",
         Rarity.COMMON,
     )
-    FORCE_FIELD = (
-        "Force field",
-        "give a companion immune this turn",
-        Rarity.UNCOMMON,
-    )
-    ADRENALINE = (
-        "Adrenaline",
-        "0 mana gain 1 energy draw 2 cards",
-        Rarity.RARE,
+    SIMPLE_SCRY = (
+        "Simple scry",
+        CompanionType.PYTHIA,
+        "Scry 2",
+        Rarity.COMMON,
     )
 
-    # WARRIOR cards
-    BLOOD_SACRIFICE = (
-        "Blood Sacrifice",
-        "lose 3 HP, give a companion 2 strength",
+    # ABORAH cards
+    HIT_THE_GYM = (
+        "Hit the Gym",
+        CompanionType.ABORAH,
+        "2 mana, gain X strength",
         Rarity.COMMON,
     )
-    DOUBLE_STRIKE = ("Double Strike", "deal 5 damage twice", Rarity.COMMON)
-    VENGEFUL_SWEEP = ("Vengeful Sweep", "deal 8 damage to all enemies", Rarity.COMMON)
-    TAKE_MY_ENERGY = ("Take my Energy", "lose 3 HP, gain 2 mana", Rarity.UNCOMMON)
-    FINAL_FORM = (
-        "Final Form",
-        "go to 1 health. deal double dmg for rest of combat",
-        Rarity.RARE,
+    DOUBLE_STRIKE = (
+        "Double Strike",
+        CompanionType.ABORAH,
+        "lose 1 strength, deal X damage twice",
+        Rarity.COMMON,
+    )
+    BIG_STRIKE = (
+        "Big strike",
+        CompanionType.ABORAH,
+        "lose 1 strength, deal X damage",
+        Rarity.COMMON,
     )
 
-    def __new__(cls, value, description, rarity):
+    def __new__(cls, value, companion, description, rarity):
         obj = object.__new__(cls)
         obj._value_ = value
+        obj.companion = companion
         obj.description = description
         obj.rarity = rarity
         return obj
+
+
+def cards_for_companion(companion_type: CompanionType) -> List[Card]:
+    return [card for card in list(Card) if card.companion == companion_type]

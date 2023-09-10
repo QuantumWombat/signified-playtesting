@@ -6,7 +6,7 @@ import os
 import random
 import pickle
 from typing import Dict, List, Optional
-from src.card import Card
+from src.card import Card, cards_for_companion
 
 from src.enemy import Enemy
 from src.companion import Companion, CompanionType
@@ -191,7 +191,9 @@ class Shop:
     def generate_card_options(self, current_companions: List[CompanionType]) -> None:
         unique_companions = set(current_companions)
         card_opts = [
-            card for companion in unique_companions for card in companion.cards
+            card
+            for companion in unique_companions
+            for card in cards_for_companion(companion)
         ]
         # TODO: implement sampling without replacement
         # TODO: weight the cards with respect to their rarity.
