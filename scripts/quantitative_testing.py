@@ -1,6 +1,7 @@
 from typing import List
 import pandas as pd
 import nltk
+import os
 
 DAMAGE = "damage"
 BLOCK = "block"
@@ -26,8 +27,9 @@ COMPANIONS = ["Pythia", "Aborah", "Architect", "Clown", "Entropy"]
 def closest_word(word: str, words: List[str]) -> str:
     edit_distances = [nltk.edit_distance(word, w) for w in words]
     for i, _ in enumerate(edit_distances):
-        if words[i].lower()[:2] == word.lower()[:2]:
-            edit_distances[i] -= 5
+        # Discount if we are using a unique common prefix.
+        common_prefix = os.path.commonprefix([word.lower(), words[i].lower()])
+        edit_distances[i] -= 4 * len(common_prefix)
     min_distance = min(edit_distances)
     chosen = words[edit_distances.index(min_distance)]
     return chosen
