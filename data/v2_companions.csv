@@ -1,0 +1,19 @@
+﻿name,PassiveAbility,Health,Strength,StartingDeck,Level2,quantity
+Architect,"At the start of combat, give each companion adjacent to this an orb.
+At the start of each turn, each companion gets a shiv if it has at least one orb. Shiv: 0 mana 3 damage",20,0,"* 3 Summon Orb (https://www.notion.so/Summon-Orb-f3d62f2dd3d74ec293403f3932c87051?pvs=21) 
+* 2 Crystallize (https://www.notion.so/Crystallize-284e746b833a4fdb9834298381c88f93?pvs=21) 
+gain additional orbs, which gives shivs, then block for each orb.",,3
+Entropy,End of combat: remove a card permanently from one of your companion’s deck.,20,0,"* 1 Self-Sharpening Blade (https://www.notion.so/Self-Sharpening-Blade-9beb5c32b0d349b8bf7e5bb81e94a671?pvs=21) 
+* 2 Bellows (https://www.notion.so/Bellows-a403a7b834ca494ca86ad3c4c238a5f1?pvs=21) 
+* 2 Cauterize (https://www.notion.so/Cauterize-9397cc53b1bc42968788418a6a6d1fc3?pvs=21) ","If you would draw from an empty deck - draw an omega instead. Where omega deals a bunch of damage to enemies and puts a status effect back in deck. ",3
+Pythia,"At the beginning of each turn, draw an extra card from this companion",20,0,"* 3 Simple Scry (https://www.notion.so/Simple-Scry-27df40ec681b4f4eb90dc00b228ce795?pvs=21) 
+* 2 Quick Thinking (https://www.notion.so/Quick-Thinking-ce8cc5a237354c469432f75c275f1330?pvs=21) 
+","Idea: tutor instead of draw when drawing extra
+Idea: Get block on draw",3
+Clown,"At the end of turn, exhaust the top card of this companion’s deck and gain 4 block",30,0,"* 3 Fire Eating (https://www.notion.so/Fire-Eating-9f3f115097e742af82c6bf36749cb9f8?pvs=21) 
+* 2 Hit the Wall (https://www.notion.so/Hit-the-Wall-b41cd5a1c70d46edbebeeac18e2b2cb6?pvs=21) 
+shuffle status cards, some damage some block",,3
+Aborah,"Start each combat with 4 strength. Whenever you play an attack from this companion, it loses 1 strength",20,5,"* 2 Double Strike (https://www.notion.so/Double-Strike-9c183f886c0f41a6b207c1d5f4413aac?pvs=21) 
+* 2 Strike (https://www.notion.so/Strike-7e28e93015ab45c2b3709f6666c496a8?pvs=21) 
+* 1 Rest (https://www.notion.so/Rest-9a61ca3455834e189d556b9f87a6bab3?pvs=21) 
+damage and strength recharge",,3
