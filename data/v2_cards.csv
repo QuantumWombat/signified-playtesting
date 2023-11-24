@@ -1,0 +1,40 @@
+﻿name,Owner,CardText,Rarity,Mana,Notes,quantity
+Double Strike,Aborah (https://www.notion.so/Aborah-b8864a1e32bc418faed2353b10f35790?pvs=21),Deal 1 damage twice,Starting Deck,1,,3
+Rest,Aborah (https://www.notion.so/Aborah-b8864a1e32bc418faed2353b10f35790?pvs=21),This companion gains 3 strength,Starting Deck,2,This is a slow way to recharge the Aborah.,3
+Strike,Aborah (https://www.notion.so/Aborah-b8864a1e32bc418faed2353b10f35790?pvs=21),Deal 4 damage,Starting Deck,1,X should be higher than what’s on double strike.,3
+Execution,Aborah (https://www.notion.so/Aborah-b8864a1e32bc418faed2353b10f35790?pvs=21),"Ch1 (costs 1): Deal X damage, remove any block on the target.
+Ch2…N (costs 1): Deal Y damage. Execute if below Math.Floor(N /  20) percent health (text replacement, round to whole number)",Common,,Also - The cause them to not attack thing,3
+Cathartic Violence,Aborah (https://www.notion.so/Aborah-b8864a1e32bc418faed2353b10f35790?pvs=21),"Ch1 (costs 1): Deal X damage
+Ch2 (costs 1): Deal Y damage
+Ch3…N (costs 1) Deal Z damage, gain Xa Strength",Rare,,X Y and Z are small. Xa is at least double the amount of strength Aborah loses on attack,3
+Empower,Architect (https://www.notion.so/Architect-2eb3489f9ace4b4b81681b0f4df6f949?pvs=21),"For each companion on your team, give it X strength if it has at least one orb.",Starting Deck,1,,3
+Summon Orb,Architect (https://www.notion.so/Architect-2eb3489f9ace4b4b81681b0f4df6f949?pvs=21),Choose a companion on your team. Give them an orb.,Starting Deck,1,,3
+Crystallize,Architect (https://www.notion.so/Architect-2eb3489f9ace4b4b81681b0f4df6f949?pvs=21),"Give a companion 4 block, then 2 extra block for each orb it has.",Starting Deck,1,,3
+Hit the Wall,Clown (https://www.notion.so/Clown-6bdd094e98184af48029dc6344a18ab0?pvs=21),Gain 8 block. Add 2 wounds to this companion’s discard pile. Wounds are unplayable status cards,Starting Deck,1,X should be a big number. Think Power through from Slay the Spire.,3
+Fire Eating,Clown (https://www.notion.so/Clown-6bdd094e98184af48029dc6344a18ab0?pvs=21),"Shuffle 3 status cards into this companion’s deck that say “Unplayable. When exhausted, deal 6 damage to a random enemy”.",Starting Deck,1,,3
+Fat Reserve,Clown (https://www.notion.so/Clown-6bdd094e98184af48029dc6344a18ab0?pvs=21),"Gain X block. When exhausted, this companion heals Y HP.",Common,0,,3
+Mood Swings,Clown (https://www.notion.so/Clown-6bdd094e98184af48029dc6344a18ab0?pvs=21),"(Whenever this saga is exhausted, advance a chapter and discard it instead)
+Ch n % 2 == 1 (costs 1): Apply n+5 thorns to target companion
+Ch n % 2 == 0 (costs 1): Apply effect “Team gains n block when this companion takes damage” to target companion   ",Rare,,"Is switching back and forth between chapters questionable? Yes. Does it add some interesting variability to the effect of exhausting the saga? I think also yes. 
+Ch3 invuln saga
+Can have a keyword for “when exhausted”",3
+Self-Sharpening Blade,Entropy (https://www.notion.so/Entropy-8346c3a472b843c19edfa99c4b679023?pvs=21),Deal 3 damage. Deal 3 additional damage next time you play this card.,Starting Deck,1,,3
+Bellows,Entropy (https://www.notion.so/Entropy-8346c3a472b843c19edfa99c4b679023?pvs=21),"Draw 2 cards, choose 1 of the cards drawn to exhaust.",Starting Deck,1,,3
+Cauterize,Entropy (https://www.notion.so/Entropy-8346c3a472b843c19edfa99c4b679023?pvs=21),Give a companion 5 block and exhaust the top card of their deck.,Common,1,,3
+Mechanical Repairs,Entropy (https://www.notion.so/Entropy-8346c3a472b843c19edfa99c4b679023?pvs=21),"Ch1 (costs 1): Heal target companion for X.
+Ch2 (costs 1): The next time you would exhaust a card from target companion’s deck, draw it instead.
+Ch3…N (costs 3): Choose a card that was exhausted this combat. You may cast it without paying its mana cost.",Uncommon,,,3
+Iron Forge,Entropy (https://www.notion.so/Entropy-8346c3a472b843c19edfa99c4b679023?pvs=21),"Ch1 (costs 0): Exhaust two target cards in hand. Conjure a self-sharpening blade into hand.
+Ch2…N (costs 1): Exhaust one target card in hand. Increase the damage of all self-sharpening blades by X.
+",Rare,,,3
+Quick Thinking,Pythia (https://www.notion.so/Pythia-b936ffecdc784229b6a2706c0b0a1251?pvs=21),Draw 2 cards,Starting Deck,1,,3
+Simple Scry,Pythia (https://www.notion.so/Pythia-b936ffecdc784229b6a2706c0b0a1251?pvs=21),"Scry 1. When you scry N, look at the top N cards of a companion’s deck. You can reorder the cards and put any number of the bottom of the draw pile.",Starting Deck,0,,3
+Brainstorm,Pythia (https://www.notion.so/Pythia-b936ffecdc784229b6a2706c0b0a1251?pvs=21),Deal X damage for each card in your hand,Starting Deck,1,This may be OP with strength.,3
+Con Artist,Pythia (https://www.notion.so/Pythia-b936ffecdc784229b6a2706c0b0a1251?pvs=21),"Ch1 (costs 0): gain 2 energy
+Ch2 (costs 1): draw 3 discard 3
+Ch3…N (costs 1): deal n * hand size damage",Common,,,3
+Hide and Seek,Pythia (https://www.notion.so/Pythia-b936ffecdc784229b6a2706c0b0a1251?pvs=21),"Ch1 (costs 1): Deal X damage and Gain X block. Shuffle a copy of hide and seek into target deck.
+Ch2 (costs 0): Deal Y damage and gain Y block. Reveal the top card of target deck, if the card revealed is “hide and seek”, exhaust it, deal Z damage to all enemies, and give all companions one turn of invulnerability.",Rare,,We could give a lotta fun rewards for this one.,3
+Word Games,Pythia (https://www.notion.so/Pythia-b936ffecdc784229b6a2706c0b0a1251?pvs=21),"Ch1 (costs 0): Discard target card from hand that starts with a letter in the first half of the alphabet. Deal X damage to all enemies and give X block to all companions.
+Ch2 (costs 0): Play target card in hand with a name that starts with a letter in the second half of the alphabet without paying its mana cost. Deal Y damage and give Y block to all enemies/companions.
+Ch3…N (costs 0): Reveal the top card of a deck. If it starts with the letter ((char) (a) + N)), Deal Z damage to all enemies and give two turns of invulnerability to all teammates.",Rare,,fuckin stupid but I had to write it down,3
