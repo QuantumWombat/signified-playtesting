@@ -55,7 +55,7 @@ def print_shop_state(
     shown_cards: List[Card],
 ) -> None:
     companion_names = [c.name for c in shown_companions]
-    card_names = [c.name for c in shown_cards]
+    card_names = [emoji_for_card_rarity(c.rarity) + c.name for c in shown_cards]
     print("-" * 10)
     print(f"Shop Level {shop_level.value}, {shop_level.desc}")
     print(f"Your current gold: ${player_gold}")
@@ -64,3 +64,14 @@ def print_shop_state(
     print(f"Upgrade the shop (${shop_level.shop_constants.upgrade_cost})")
     print(f"Reroll (${REROLL_COST})")
     print("-" * 10)
+
+
+def emoji_for_card_rarity(rarity: str):
+    if rarity == "Common":
+        return "🥉"
+    elif rarity == "Uncommon":
+        return "🥈"
+    elif rarity == "Rare":
+        return "🥇"
+    else:
+        return ""
