@@ -1,5 +1,6 @@
 jupyterlab
 pandas
 nltk
+nb-clean
 
 -e .

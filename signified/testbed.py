@@ -14,6 +14,7 @@ from signified.constants import (
 from signified.entity import Companion, CompanionFactory, Enemy
 from signified.utils import (
     closest_word,
+    emoji_for_card_rarity,
     get_cleaned_input,
     print_combat_status,
     print_companion_roster,
@@ -108,6 +109,11 @@ class TestingInstance:
         )
         print(
             "Use `lookup` to get information about a card or companion, e.g. `lookup Aborah`"
+        )
+        print(
+            " ".join(
+                [emoji_for_card_rarity(r) + r for r in ["Common", "Uncommon", "Rare"]]
+            )
         )
         while True:
             print(">>> ", end="")
@@ -216,10 +222,12 @@ class TestingInstance:
             c.companion_name for c in self.companion_roster.values()
         ]
         allowed_cards = [
-            card
+            [card] * self.shop_level.shop_constants.card_shop_weights[card.rarity]
             for card in self.available_cards
             if card.parent_companion in set(companion_roster_names)
         ]
+        allowed_cards = [card for card_dups in allowed_cards for card in card_dups]
+
         if len(allowed_cards) == 0:
             return []
         return random.sample(
