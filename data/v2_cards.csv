@@ -2,17 +2,28 @@
 Double Strike,Aborah (https://www.notion.so/Aborah-b8864a1e32bc418faed2353b10f35790?pvs=21),Deal 1 damage twice,1,,3,Starting Deck
 Rest,Aborah (https://www.notion.so/Aborah-b8864a1e32bc418faed2353b10f35790?pvs=21),This companion gains 3 strength,2,This is a slow way to recharge the Aborah.,3,Starting Deck
 Strike,Aborah (https://www.notion.so/Aborah-b8864a1e32bc418faed2353b10f35790?pvs=21),Deal 4 damage,1,X should be higher than what’s on double strike.,3,Starting Deck
+"Fiery Remembrance ",Aborah (https://www.notion.so/Aborah-b8864a1e32bc418faed2353b10f35790?pvs=21),Deal X damage. Gain 1 energy if you have exhausted a card this turn,1,,3,Common
 Execution,Aborah (https://www.notion.so/Aborah-b8864a1e32bc418faed2353b10f35790?pvs=21),"Ch1 (costs 1): Deal X damage, remove any block on the target.
 Ch2…N (costs 1): Deal Y damage. Execute if below Math.Floor(N /  20) percent health (text replacement, round to whole number)",,Also - The cause them to not attack thing,3,Common
+Sneak Attack,Aborah (https://www.notion.so/Aborah-b8864a1e32bc418faed2353b10f35790?pvs=21),Deal X Damage. Costs 1 less if you have drawn additional cards this turn.,1,This could also read. Costs 1 less if you have drawn an additional card this turn,3,Uncommon
+Rampage,Aborah (https://www.notion.so/Aborah-b8864a1e32bc418faed2353b10f35790?pvs=21),Deal X damage for each attack in your hand,2,This card is probably going to be a little busted.,3,Rare
 Cathartic Violence,Aborah (https://www.notion.so/Aborah-b8864a1e32bc418faed2353b10f35790?pvs=21),"Ch1 (costs 1): Deal X damage
 Ch2 (costs 1): Deal Y damage
 Ch3…N (costs 1) Deal Z damage, gain Xa Strength",,X Y and Z are small. Xa is at least double the amount of strength Aborah loses on attack,3,Rare
 Summon Orb,Architect (https://www.notion.so/Architect-2eb3489f9ace4b4b81681b0f4df6f949?pvs=21),Choose a companion on your team. Give them an orb.,1,,3,Starting Deck
 Crystallize,Architect (https://www.notion.so/Architect-2eb3489f9ace4b4b81681b0f4df6f949?pvs=21),"Give a companion 4 block, then 2 extra block for each orb it has.",1,,3,Starting Deck
 Empower,Architect (https://www.notion.so/Architect-2eb3489f9ace4b4b81681b0f4df6f949?pvs=21),"For each companion on your team, give it X strength if it has at least one orb.",1,,3,Common
+Healing Shield,Architect (https://www.notion.so/Architect-2eb3489f9ace4b4b81681b0f4df6f949?pvs=21),"For each companion on your team, give it X block if it has at least one orb. 
+
+When exhausted heal each companion on your team X if it has at least 1 orb.",2,Wording is a little wonky hear. This could either be a 1 or 2 cost depending on the values.,,Uncommon
+Final Smash,Architect (https://www.notion.so/Architect-2eb3489f9ace4b4b81681b0f4df6f949?pvs=21),Deal damage equal to x times the number of orbs you have summoned this combat to target enemy,1,x should be 2 or 3,3,Rare
+Supercharge,Architect (https://www.notion.so/Architect-2eb3489f9ace4b4b81681b0f4df6f949?pvs=21),Give an orb to all allied units. Costs 1 less each time you scry this combat,8,The mana value is truly just me guessing at a large number that would make this a fun build around.,3,Rare
 Hit the Wall,Clown (https://www.notion.so/Clown-6bdd094e98184af48029dc6344a18ab0?pvs=21),Gain 8 block. Add 2 wounds to this companion’s discard pile. Wounds are unplayable status cards,1,X should be a big number. Think Power through from Slay the Spire.,3,Starting Deck
 Fire Eating,Clown (https://www.notion.so/Clown-6bdd094e98184af48029dc6344a18ab0?pvs=21),"Shuffle 3 status cards into this companion’s deck that say “Unplayable. When exhausted, deal 6 damage to a random enemy”.",1,,3,Starting Deck
+Sentinel,Clown (https://www.notion.so/Clown-6bdd094e98184af48029dc6344a18ab0?pvs=21),Gain X block. When exhausted gain 2 energy,1,,3,Common
+Protecting Aura,Clown (https://www.notion.so/Clown-6bdd094e98184af48029dc6344a18ab0?pvs=21),Remove one orb from this unit. Give an ally X block.,0,Can we do additional costs like this? @Adam Klein. Also not sure if this card should also have a mana cost. Also not sure if it is worth adding this functionality for just one card. We would likely need to have it on more cards to be more worth while,3,Common
 Fat Reserve,Clown (https://www.notion.so/Clown-6bdd094e98184af48029dc6344a18ab0?pvs=21),"Gain X block. When exhausted, this companion heals Y HP.",0,,3,Common
+Saw it Coming,Clown (https://www.notion.so/Clown-6bdd094e98184af48029dc6344a18ab0?pvs=21),Give 20 block to target companion. Costs 1 less for each card drawn this turn,3,"3 may not be enough here, but I figure this card should be able to be played with the base amount of mana a player has without drawing additional cards",3,Uncommon
 Mood Swings,Clown (https://www.notion.so/Clown-6bdd094e98184af48029dc6344a18ab0?pvs=21),"(Whenever this saga is exhausted, advance a chapter and discard it instead)
 Ch n % 2 == 1 (costs 1): Apply n+5 thorns to target companion
 Ch n % 2 == 0 (costs 1): Apply effect “Team gains n block when this companion takes damage” to target companion   ",,"Is switching back and forth between chapters questionable? Yes. Does it add some interesting variability to the effect of exhausting the saga? I think also yes. 
@@ -21,18 +32,24 @@ Can have a keyword for “when exhausted”",3,Rare
 Cauterize,Entropy (https://www.notion.so/Entropy-8346c3a472b843c19edfa99c4b679023?pvs=21),Give a companion 5 block and exhaust the top card of their deck.,1,,3,Starting Deck
 Self-Sharpening Blade,Entropy (https://www.notion.so/Entropy-8346c3a472b843c19edfa99c4b679023?pvs=21),Deal 3 damage. Deal 3 additional damage next time you play this card.,1,,3,Starting Deck
 Bellows,Entropy (https://www.notion.so/Entropy-8346c3a472b843c19edfa99c4b679023?pvs=21),"Draw 2 cards, choose 1 of the cards drawn to exhaust.",1,,3,Starting Deck
+Recycle,Entropy (https://www.notion.so/Entropy-8346c3a472b843c19edfa99c4b679023?pvs=21),"Exhaust a card, gain 1 energy. Gain 2 if you have drawn an additional card this turn",0,"The additional boost could be worded slightly differently. ",3,Uncommon
 Mechanical Repairs,Entropy (https://www.notion.so/Entropy-8346c3a472b843c19edfa99c4b679023?pvs=21),"Ch1 (costs 1): Heal target companion for X.
 Ch2 (costs 1): The next time you would exhaust a card from target companion’s deck, draw it instead.
 Ch3…N (costs 3): Choose a card that was exhausted this combat. You may cast it without paying its mana cost.",,,3,Uncommon
+Inferno,Entropy (https://www.notion.so/Entropy-8346c3a472b843c19edfa99c4b679023?pvs=21),Exhaust all non attack cards. Deal X damage to all enemies.,2,,3,Rare
+Consume,Entropy (https://www.notion.so/Entropy-8346c3a472b843c19edfa99c4b679023?pvs=21),"Exhaust a card from your hand. Target unit gains strength equal to it’s mana cost. ",0,"This could be based on the cards original mana cost or its current mana value. ",3,Rare
 Iron Forge,Entropy (https://www.notion.so/Entropy-8346c3a472b843c19edfa99c4b679023?pvs=21),"Ch1 (costs 0): Exhaust two target cards in hand. Conjure a self-sharpening blade into hand.
 Ch2…N (costs 1): Exhaust one target card in hand. Increase the damage of all self-sharpening blades by X.
 ",,,3,Rare
 Quick Thinking,Pythia (https://www.notion.so/Pythia-b936ffecdc784229b6a2706c0b0a1251?pvs=21),Draw 2 cards,1,,3,Starting Deck
 Simple Scry,Pythia (https://www.notion.so/Pythia-b936ffecdc784229b6a2706c0b0a1251?pvs=21),"Scry 1. When you scry N, look at the top N cards of a companion’s deck. You can reorder the cards and put any number of the bottom of the draw pile.",0,,3,Starting Deck
+Meditate,Pythia (https://www.notion.so/Pythia-b936ffecdc784229b6a2706c0b0a1251?pvs=21),Draw a card. Gain 1 energy for each orb on this unit,1,,3,Common
 Brainstorm,Pythia (https://www.notion.so/Pythia-b936ffecdc784229b6a2706c0b0a1251?pvs=21),Deal X damage for each card in your hand,1,This may be OP with strength.,3,Common
 Con Artist,Pythia (https://www.notion.so/Pythia-b936ffecdc784229b6a2706c0b0a1251?pvs=21),"Ch1 (costs 0): gain 2 energy
 Ch2 (costs 1): draw 3 discard 3
 Ch3…N (costs 1): deal n * hand size damage",,,3,Common
+Hatching Plans,Pythia (https://www.notion.so/Pythia-b936ffecdc784229b6a2706c0b0a1251?pvs=21),Draw 1. When exhausted draw 2,1,,3,Uncommon
+Spot Weakness,Pythia (https://www.notion.so/Pythia-b936ffecdc784229b6a2706c0b0a1251?pvs=21),"If an enemy intends to attack, give target ally 3 strength.",1,,3,Uncommon
 Hide and Seek,Pythia (https://www.notion.so/Pythia-b936ffecdc784229b6a2706c0b0a1251?pvs=21),"Ch1 (costs 1): Deal X damage and Gain X block. Shuffle a copy of hide and seek into target deck.
 Ch2 (costs 0): Deal Y damage and gain Y block. Reveal the top card of target deck, if the card revealed is “hide and seek”, exhaust it, deal Z damage to all enemies, and give all companions one turn of invulnerability.",,We could give a lotta fun rewards for this one.,3,Rare
 Word Games,Pythia (https://www.notion.so/Pythia-b936ffecdc784229b6a2706c0b0a1251?pvs=21),"Ch1 (costs 0): Discard target card from hand that starts with a letter in the first half of the alphabet. Deal X damage to all enemies and give X block to all companions.
