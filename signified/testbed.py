@@ -75,12 +75,14 @@ class TestingInstance:
             action = split[0] if len(split) >= 1 else ""
             chosen_action = closest_word(action, available_actions)
             if chosen_action == "damage":
-                if len(split) != 3:
-                    raise ValueError("Usage: damage Goon 4")
-                # We assume that the second index is the name of the entity
-                # and the third index is the amount of damage, e.g. damage Goon 1
-                name = split[1]
-                damage_count = int(split[2])
+                try:
+                    # We assume that the second index is the name of the entity
+                    # and the third index is the amount of damage, e.g. damage Goon 1
+                    name = split[1]
+                    damage_count = int(split[2])
+                except Exception as e:
+                    print("proper usage :) `damage Goon 4`")
+                    continue
 
                 enemy_names = [enemy.name for enemy in enemies]
                 companion_names = list(self.companion_roster.keys())
