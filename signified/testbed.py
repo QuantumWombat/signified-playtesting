@@ -64,7 +64,7 @@ class TestingInstance:
 
         enemy_tracker = {enemy.name: enemy for enemy in enemies}
 
-        available_actions = ["damage", "exit", "status"]
+        available_actions = ["damage", "exit", "status", "endturn"]
         print_combat_status(self.companion_roster, enemies)
         print("Starting combat.")
         print(f"Available actions: {available_actions}")
@@ -96,6 +96,11 @@ class TestingInstance:
             elif chosen_action == "exit":
                 break
             elif chosen_action == "status":
+                print_combat_status(self.companion_roster, enemies)
+            elif chosen_action == "endturn":
+                print("End of turn; scaling enemies")
+                for _, enemy in enemy_tracker.items():
+                    enemy.attack += enemy.scaling_factor
                 print_combat_status(self.companion_roster, enemies)
 
     def shop(self) -> None:

@@ -42,7 +42,9 @@ def print_companion_roster(companion_roster: Dict[str, Companion]):
 
 def print_enemies(dudes: List[Enemy]) -> None:
     for dude in dudes:
-        attack_pattern = dude.attack_pattern_tmpl.format(attack=dude.attack)
+        attack_pattern = dude.attack_pattern_tmpl.format(
+            attack=dude.attack, scaling_factor=dude.scaling_factor
+        )
         print(
             f"{dude.name.ljust(15)} {dude.health}/{dude.max_health}💖 {attack_pattern}"
         )
