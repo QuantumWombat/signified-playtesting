@@ -20,6 +20,8 @@ class Entity:
 class Enemy(Entity):
     attack: int
     attack_pattern_tmpl: str
+    # Optional scaling factor for the Enemy that gives linearly increasing attack.
+    scaling_factor: int = 0
 
 
 @dataclass
