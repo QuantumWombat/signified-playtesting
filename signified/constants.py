@@ -31,8 +31,8 @@ class ShopLevel(Enum):
             upgrade_cost=6,
             card_shop_weights={
                 "Starting Deck": 0,
-                "Common": 3,
-                "Uncommon": 2,
+                "Common": 15,
+                "Uncommon": 4,
                 "Rare": 1,
             },
         ),
@@ -46,9 +46,9 @@ class ShopLevel(Enum):
             upgrade_cost=12,
             card_shop_weights={
                 "Starting Deck": 0,
-                "Common": 1,
-                "Uncommon": 1,
-                "Rare": 1,
+                "Common": 10,
+                "Uncommon": 8,
+                "Rare": 2,
             },
         ),
     )
@@ -61,9 +61,9 @@ class ShopLevel(Enum):
             upgrade_cost=18,
             card_shop_weights={
                 "Starting Deck": 0,
-                "Common": 1,
-                "Uncommon": 2,
-                "Rare": 3,
+                "Common": 8,
+                "Uncommon": 8,
+                "Rare": 4,
             },
         ),
     )
