@@ -2,7 +2,13 @@ import nltk
 import os
 from typing import Dict, List
 from signified.card import Card
-from signified.constants import CARD_COST, COMPANION_COST, REROLL_COST
+from signified.constants import (
+    CARD_COST,
+    COMPANION_COST,
+    REROLL_COST,
+    SHOP_HEAL_AMOUNT,
+    SHOP_HEAL_COST,
+)
 
 from signified.entity import Companion, CompanionFactory, Enemy
 from signified.constants import ShopLevel
@@ -67,6 +73,9 @@ def print_shop_state(
     print(f"Cards (${CARD_COST}): \n{card_names}")
     print(f"Upgrade the shop (${shop_level.shop_constants.upgrade_cost})")
     print(f"Reroll (${REROLL_COST})")
+    print(
+        f"Heal a companion for {SHOP_HEAL_AMOUNT} HP (${SHOP_HEAL_COST}). can only be used once per shop"
+    )
     print("-" * 10)
 
 

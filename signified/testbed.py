@@ -9,6 +9,8 @@ from signified.constants import (
     COMPANION_COST,
     INTEREST_RATE,
     REROLL_COST,
+    SHOP_HEAL_AMOUNT,
+    SHOP_HEAL_COST,
     ShopLevel,
 )
 from signified.entity import Companion, CompanionFactory, Enemy
@@ -108,7 +110,15 @@ class TestingInstance:
         companions = self._generate_companion_options()
         cards = self._generate_card_options()
         print_shop_state(self.player_gold, self.shop_level, companions, cards)
-        available_actions = ["buy", "exit", "status", "upgrade", "reroll", "lookup"]
+        available_actions = [
+            "buy",
+            "exit",
+            "status",
+            "upgrade",
+            "reroll",
+            "lookup",
+            "heal",
+        ]
         print("Welcome to the shop.")
         print(f"Available actions: {available_actions}")
         print(
@@ -122,6 +132,7 @@ class TestingInstance:
                 [emoji_for_card_rarity(r) + r for r in ["Common", "Uncommon", "Rare"]]
             )
         )
+        used_shop_heal = False
         while True:
             print(">>> ", end="")
             split = get_cleaned_input()
@@ -211,6 +222,7 @@ class TestingInstance:
 
             elif chosen_action == "status":
                 print_shop_state(self.player_gold, self.shop_level, companions, cards)
+                print_companion_roster(self.companion_roster)
 
             elif chosen_action == "lookup":
                 choice = " ".join(split[1:])
@@ -223,6 +235,30 @@ class TestingInstance:
                 elif selection in companion_names:
                     companion = [c for c in companions if c.name == selection][0]
                     print(companion)
+            elif chosen_action == "heal":
+                if used_shop_heal:
+                    print("You can only use the heal in the shop once.")
+                    continue
+                if self.player_gold - SHOP_HEAL_COST < 0:
+                    print(
+                        "you cannot afford to heal, current balance "
+                        + f"${self.player_gold} and heal cost ${SHOP_HEAL_COST}"
+                    )
+                    continue
+                self.player_gold -= SHOP_HEAL_COST
+
+                choice = " ".join(split[1:])
+                companion_names = list(self.companion_roster.keys())
+                selection = closest_word(choice, companion_names)
+
+                cur_hp = self.companion_roster[selection].health
+                updated_hp = min(
+                    self.companion_roster[selection].max_health,
+                    cur_hp + SHOP_HEAL_AMOUNT,
+                )
+                print(f"Healing companion {selection} for {updated_hp - cur_hp} HP")
+                self.companion_roster[selection].health = updated_hp
+                used_shop_heal = True
 
     def _generate_card_options(self) -> List[Card]:
         companion_roster_names = [
