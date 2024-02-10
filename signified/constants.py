@@ -3,10 +3,10 @@ from enum import Enum
 from typing import Dict
 
 
-COMPANION_COST = 4
+COMPANION_COST = 2
 CARD_COST = 1
 REROLL_COST = 1
-INTEREST_RATE = 1 / 5
+INTEREST_RATE = 1 / 3
 SHOP_HEAL_AMOUNT = 10
 SHOP_HEAL_COST = 2
 
@@ -28,14 +28,14 @@ class ShopLevel(Enum):
         1,
         "Energy: 3, Max Team Size: 3",
         ShopConstants(
-            num_cards_to_show=4,
-            num_companions_to_show=2,
+            num_cards_to_show=3,
+            num_companions_to_show=1,
             upgrade_cost=6,
             card_shop_weights={
                 "Starting Deck": 0,
                 "Common": 15,
-                "Uncommon": 4,
-                "Rare": 1,
+                "Uncommon": 5,
+                "Rare": 0,
             },
         ),
     )
@@ -43,9 +43,9 @@ class ShopLevel(Enum):
         2,
         "Energy: 3, Max Team Size 4",
         ShopConstants(
-            num_cards_to_show=5,
+            num_cards_to_show=4,
             num_companions_to_show=2,
-            upgrade_cost=12,
+            upgrade_cost=18,
             card_shop_weights={
                 "Starting Deck": 0,
                 "Common": 10,
@@ -59,8 +59,8 @@ class ShopLevel(Enum):
         "Energy: 3, Max Team Size 5",
         ShopConstants(
             num_cards_to_show=5,
-            num_companions_to_show=3,
-            upgrade_cost=18,
+            num_companions_to_show=2,
+            upgrade_cost=22,
             card_shop_weights={
                 "Starting Deck": 0,
                 "Common": 8,
