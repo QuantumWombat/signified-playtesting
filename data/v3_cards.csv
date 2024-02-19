@@ -3,10 +3,10 @@ Rest,Aborah (https://www.notion.so/Aborah-b8864a1e32bc418faed2353b10f35790?pvs=2
 Strike,Aborah (https://www.notion.so/Aborah-b8864a1e32bc418faed2353b10f35790?pvs=21),Deal 4 damage,1,X should be higher than what’s on double strike.,3,Starting Deck
 Double Strike,Aborah (https://www.notion.so/Aborah-b8864a1e32bc418faed2353b10f35790?pvs=21),Deal 1 damage twice,1,,3,Starting Deck
 Pile on,Aborah (https://www.notion.so/Aborah-b8864a1e32bc418faed2353b10f35790?pvs=21),"Deal 4 damage. If the last card played this combat was an attack, gain 1 strength",1,,3,Common
-Strength of the Spheres,Aborah (https://www.notion.so/Aborah-b8864a1e32bc418faed2353b10f35790?pvs=21),This Aborah gains 1 strength for each orb it has.,1,"(ethan: cool) ",3,Common
+Strength of the Spheres,Aborah (https://www.notion.so/Aborah-b8864a1e32bc418faed2353b10f35790?pvs=21),This Aborah gains 2 strength for each orb it has.,1,"(ethan: cool) ",3,Common
 Tempest,Aborah (https://www.notion.so/Aborah-b8864a1e32bc418faed2353b10f35790?pvs=21),Deal 1 damage 4 times,2,"This is more efficient than playing two double strikes, because you lose half the strength. (ethan: I think this could be an uncommon, similar to pummel)",3,Common
 Limit Testing,Aborah (https://www.notion.so/Aborah-b8864a1e32bc418faed2353b10f35790?pvs=21),Gain 1 strength. Gain 2 strength instead if this Aborah is at 1 strength or lower.,0,(ethan: I like this one a good bit. I was thinking it could be funny to have a card like clash in our game that can ONLY be played in certain circumstances. this could be the one…then it would probably only be a common),3,Uncommon
-Ashen Blade,Aborah (https://www.notion.so/Aborah-b8864a1e32bc418faed2353b10f35790?pvs=21),Deal 1 damage twice. Costs 1 less if you have exhausted a card this turn,1,,3,Uncommon
+Ashen Blade,Aborah (https://www.notion.so/Aborah-b8864a1e32bc418faed2353b10f35790?pvs=21),Deal 1 damage twice. Gain 1 energy if you have exhausted a card this turn.,1,Would be much simpler to implement if it read “Deal 1 damage twice. Gain one energy if you have exhausted a card this turn.”,3,Uncommon
 Rampage,Aborah (https://www.notion.so/Aborah-b8864a1e32bc418faed2353b10f35790?pvs=21),Deal 1 damage for each attack you’ve played this turn,1,"Busted, but it’s a rare card for a reason 🙂",3,Rare
 Cathartic Violence,Aborah (https://www.notion.so/Aborah-b8864a1e32bc418faed2353b10f35790?pvs=21),"Ch1 (costs 1): Deal 1 damage twice.
 Ch2 (costs 1): Deal 1 damage thrice
@@ -18,8 +18,8 @@ Dalde Bance,Architect (https://www.notion.so/Architect-2eb3489f9ace4b4b81681b0f4
 Healing Rage,Architect (https://www.notion.so/Architect-2eb3489f9ace4b4b81681b0f4df6f949?pvs=21),Each unit with at least one orb gets 4 block,1,,3,Common
 Fortress,Architect (https://www.notion.so/Architect-2eb3489f9ace4b4b81681b0f4df6f949?pvs=21),"Summon an orb. When exhausted, give an orb to each adjacent unit",1,,3,Common
 Empower,Architect (https://www.notion.so/Architect-2eb3489f9ace4b4b81681b0f4df6f949?pvs=21),"For each companion on your team, give it 1 strength if it has at least one orb.",1,,3,Common
-Deez Nuts,Architect (https://www.notion.so/Architect-2eb3489f9ace4b4b81681b0f4df6f949?pvs=21),Deal 2 damage to all enemies for each orb on your entire team,2,I think X would need to be 6 or 7. I’m thinking of this as a 2 mana deal 20+,3,Uncommon
-Mitosis,Architect (https://www.notion.so/Architect-2eb3489f9ace4b4b81681b0f4df6f949?pvs=21),Each companion with an orb gets another orb,2,(ethan: 😳),3,Uncommon
+Deez Nuts,Architect (https://www.notion.so/Architect-2eb3489f9ace4b4b81681b0f4df6f949?pvs=21),Deal 3 damage to all enemies for each orb on your entire team,2,I think X would need to be 6 or 7. I’m thinking of this as a 2 mana deal 20+,3,Uncommon
+Mitosis,Architect (https://www.notion.so/Architect-2eb3489f9ace4b4b81681b0f4df6f949?pvs=21),Each companion with an orb gets another orb,1,(ethan: 😳),3,Uncommon
 Consume Orb,Architect (https://www.notion.so/Architect-2eb3489f9ace4b4b81681b0f4df6f949?pvs=21),Consume one orb from target companion. Gain 2 energy and draw 1 card from their deck,1,find a better way to word this later,3,Uncommon
 Enhance,Architect (https://www.notion.so/Architect-2eb3489f9ace4b4b81681b0f4df6f949?pvs=21),"Ch1 (costs 1): Increase the damage of all shivs by 1
 Ch2 (costs 1): Increase the damage of all shivs by 2
@@ -27,12 +27,12 @@ Ch3 (costs 1): Increase the damage of all shivs by 3. Exhaust",1,"The last chapt
 Flurry of Blows,Architect (https://www.notion.so/Architect-2eb3489f9ace4b4b81681b0f4df6f949?pvs=21),Deal 1 damage to all enemies for each card you have played this turn,0,could see this costing 0 or 1,3,Rare
 Supernova,Architect (https://www.notion.so/Architect-2eb3489f9ace4b4b81681b0f4df6f949?pvs=21),Consume all orbs from target companion. Gain 1 energy and draw 1 card from their deck for each orb consumed this way.,1,,3,Rare
 Eat Nails,Clown (https://www.notion.so/Clown-6bdd094e98184af48029dc6344a18ab0?pvs=21),"Give a companion 5 block. Shuffle 2 Ironskin into this companion’s deck
-Ironskin: 1 mana exhaust this companion gains 3 block",1,,3,Starting Deck
+Ironskin: 1 mana: exhaust. On exhaust, this companion gains 3 block.",1,,3,Starting Deck
 Fire Eating,Clown (https://www.notion.so/Clown-6bdd094e98184af48029dc6344a18ab0?pvs=21),"Shuffle 3 Heartburns into this companion’s deck that say “1 mana Exhaust. When exhausted, deal 6 damage to a random enemy”.",1,,3,Starting Deck
 Pocket Sand,Clown (https://www.notion.so/Clown-6bdd094e98184af48029dc6344a18ab0?pvs=21),Give all companions on your team 3 block. Shuffle 2 Ironskin into this companion’s deck,1,,3,Common
-Protecting Aura,Clown (https://www.notion.so/Clown-6bdd094e98184af48029dc6344a18ab0?pvs=21),Consume one orb from this companion. Give a companion 10 block.,0,,3,Common
-Scry the Stomach,Clown (https://www.notion.so/Clown-6bdd094e98184af48029dc6344a18ab0?pvs=21),"Shuffle 1 Heartburn into this companion’s deck, then scry 3",1,,3,Common
-Smash and Dash,Clown (https://www.notion.so/Clown-6bdd094e98184af48029dc6344a18ab0?pvs=21),"Deal 8 damage, gain 8 block",2,,3,Uncommon
+Protecting Aura,Clown (https://www.notion.so/Clown-6bdd094e98184af48029dc6344a18ab0?pvs=21),Consume one orb from this companion. Give a companion 12 block.,0,,3,Common
+Scry the Stomach,Clown (https://www.notion.so/Clown-6bdd094e98184af48029dc6344a18ab0?pvs=21),"Shuffle 1 Heartburn into this companion’s deck, then scry 3",0,,3,Common
+Smash and Dash,Clown (https://www.notion.so/Clown-6bdd094e98184af48029dc6344a18ab0?pvs=21),"Deal 10 damage, gain 10 block",2,,3,Uncommon
 Puff the Chest,Clown (https://www.notion.so/Clown-6bdd094e98184af48029dc6344a18ab0?pvs=21),"Gain 2 energy. Add a Nasty Cigarette on top of this companion’s deck
 Nasty Cigarette: 1 mana exhaust, when exhausted this companion loses 3HP",0,,3,Uncommon
 Bigger the Better,Clown (https://www.notion.so/Clown-6bdd094e98184af48029dc6344a18ab0?pvs=21),"Give a companion 6 block. If this Clown has more than 10 cards in its deck and discard, give the companion 12 block instead",1,,3,Uncommon
@@ -40,7 +40,7 @@ Fire Away,Clown (https://www.notion.so/Clown-6bdd094e98184af48029dc6344a18ab0?pv
 Ch2 (costs 0): Shuffle 3 heart burn into this companions deck
 Ch3 (costs 1): Exhaust all status cards in this companion’s deck and discard pile. Deal 4 damage to all enemies for each card exhausted this way ",1,Do we have a block when exhausted status card?,3,Rare
 Double Heartburn,Clown (https://www.notion.so/Clown-6bdd094e98184af48029dc6344a18ab0?pvs=21),Shuffle 2 heartburn into this companion’s deck. Double the damage of all heartburns in this companion’s deck and discard.,1,"(ethan: a y o, did someone say accuracy an fire breathing had a baby. this is cool man big fan)",3,Rare
-Self-Sharpening Blade,Entropy (https://www.notion.so/Entropy-8346c3a472b843c19edfa99c4b679023?pvs=21),Deal 3 damage. Increase the damage of ALL self-sharpening blade cards by 3 this combat,1,,3,Starting Deck
+Self-Sharpening Blade,Entropy (https://www.notion.so/Entropy-8346c3a472b843c19edfa99c4b679023?pvs=21),Deal 5 damage. Increase the damage of ALL self-sharpening blade cards by 5 this combat,1,,3,Starting Deck
 Cauterize,Entropy (https://www.notion.so/Entropy-8346c3a472b843c19edfa99c4b679023?pvs=21),Give a companion 5 block and exhaust the top card of their deck.,1,,3,Starting Deck
 Bellows,Entropy (https://www.notion.so/Entropy-8346c3a472b843c19edfa99c4b679023?pvs=21),"Draw 2 cards, choose 1 card in your hand to exhaust",1,,3,Starting Deck
 All out attack,Entropy (https://www.notion.so/Entropy-8346c3a472b843c19edfa99c4b679023?pvs=21),deal 7 damage to all enemies. Exhaust 1 random card from your hand.,1,,3,Common
@@ -54,14 +54,14 @@ Ch2…N (costs 0): Conjure a self-sharpening blade into your hand, it costs 0 th
 Simple Scry,Pythia (https://www.notion.so/Pythia-b936ffecdc784229b6a2706c0b0a1251?pvs=21),Scry 1,0,,3,Starting Deck
 Draw,Pythia (https://www.notion.so/Pythia-b936ffecdc784229b6a2706c0b0a1251?pvs=21),Draw 2 cards,1,,3,Starting Deck
 Bigger Draw,Pythia (https://www.notion.so/Pythia-b936ffecdc784229b6a2706c0b0a1251?pvs=21),Draw 3 cards,1,,3,Common
-Live to see another day,Pythia (https://www.notion.so/Pythia-b936ffecdc784229b6a2706c0b0a1251?pvs=21),Give target companion 6 block. Gain 1 additional energy next turn,1,,3,Common
+Live to see another day,Pythia (https://www.notion.so/Pythia-b936ffecdc784229b6a2706c0b0a1251?pvs=21),Give target companion 7 block. Gain 1 additional energy next turn,1,,3,Common
 Superior Scry,Pythia (https://www.notion.so/Pythia-b936ffecdc784229b6a2706c0b0a1251?pvs=21),Scry 3,0,,3,Common
 Brainstorm,Pythia (https://www.notion.so/Pythia-b936ffecdc784229b6a2706c0b0a1251?pvs=21),Deal 1 damage for each card in your hand,1,,3,Common
 Embue with Rage,Pythia (https://www.notion.so/Pythia-b936ffecdc784229b6a2706c0b0a1251?pvs=21),"The next attack card you play deals double damage. ",0,,3,Uncommon
-Identify weakness,Pythia (https://www.notion.so/Pythia-b936ffecdc784229b6a2706c0b0a1251?pvs=21),"If an enemy intends to attack, give all units X strength for each orb they have.",1,"Should change the condition, enemy attack may not work how we want.",3,Uncommon
+Identify weakness,Pythia (https://www.notion.so/Pythia-b936ffecdc784229b6a2706c0b0a1251?pvs=21),"If an enemy intends to attack, give all units 1 strength for each orb they have.",1,"Should change the condition, enemy attack may not work how we want.",3,Uncommon
 Meditate,Pythia (https://www.notion.so/Pythia-b936ffecdc784229b6a2706c0b0a1251?pvs=21),Draw a card. Gain 1 energy for each orb on this unit,1,,3,Uncommon
 Con Artist,Pythia (https://www.notion.so/Pythia-b936ffecdc784229b6a2706c0b0a1251?pvs=21),"Ch1 (costs 0): gain 2 energy
 Ch2 (costs 1): draw 3 discard 3
-Ch3…N (costs 1): deal n * hand size damage",,,3,Uncommon
+Ch3 (costs 1): deal 2 damage for each card in hand.",,,3,Uncommon
 Brilliant Mind,Pythia (https://www.notion.so/Pythia-b936ffecdc784229b6a2706c0b0a1251?pvs=21),Deal 4 damage plus 4 additional damage for each time you shuffle a companion’s deck this combat,1,"Shuffling deck is more generalized ",3,Rare
 Even More Demonic Tutor,Pythia (https://www.notion.so/Pythia-b936ffecdc784229b6a2706c0b0a1251?pvs=21),Put a card from a companion’s draw pile into your hand.,0,,3,Rare
