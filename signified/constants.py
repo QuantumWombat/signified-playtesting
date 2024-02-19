@@ -28,7 +28,7 @@ class ShopLevel(Enum):
         1,
         "Energy: 3, Max Team Size: 3",
         ShopConstants(
-            num_cards_to_show=3,
+            num_cards_to_show=2,
             num_companions_to_show=1,
             upgrade_cost=6,
             card_shop_weights={
@@ -43,14 +43,14 @@ class ShopLevel(Enum):
         2,
         "Energy: 3, Max Team Size 4",
         ShopConstants(
-            num_cards_to_show=4,
-            num_companions_to_show=2,
+            num_cards_to_show=3,
+            num_companions_to_show=1,
             upgrade_cost=18,
             card_shop_weights={
                 "Starting Deck": 0,
-                "Common": 10,
+                "Common": 11,
                 "Uncommon": 8,
-                "Rare": 2,
+                "Rare": 1,
             },
         ),
     )
@@ -58,7 +58,7 @@ class ShopLevel(Enum):
         3,
         "Energy: 3, Max Team Size 5",
         ShopConstants(
-            num_cards_to_show=5,
+            num_cards_to_show=4,
             num_companions_to_show=2,
             upgrade_cost=22,
             card_shop_weights={
